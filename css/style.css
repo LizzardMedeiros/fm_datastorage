@@ -175,7 +175,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 618px) and (min-width: 375px) {
+@media only screen and (max-width: 618px) {
   body {
     display: flex;
     align-items: center;
