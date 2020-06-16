@@ -25,7 +25,6 @@ body {
 }
 
 .container .item {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   color: white;
