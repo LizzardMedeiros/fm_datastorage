@@ -61,9 +61,59 @@ body {
   margin: 32px 16px 0 0;
 }
 
-.container .progress {
+.storage-status {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+}
+
+.storage-status .balloom {
+  position: relative;
+  padding: 16px 32px;
+  background-color: #fff;
+  border-radius: 16px;
+  border-bottom-right-radius: 0;
+  margin-right: 48px;
+  margin-bottom: -16px;
+}
+
+.storage-status .balloom:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  top: 100%;
+  border: 12px solid;
+  border-color: #fff #fff transparent transparent;
+}
+
+.storage-status .balloom .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storage-status .balloom strong {
+  font-size: 48px;
+  margin-right: 16px;
+}
+
+.storage-status .balloom small {
+  text-transform: uppercase;
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.storage-status .progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress .used {
+  padding-bottom: 16px;
+  font-size: 14px;
 }
 
 .progress .field {
@@ -77,11 +127,23 @@ body {
 }
 
 .progress .field .bar {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   border-radius: 8px;
   height: 16px;
-  width: 300px;
+  padding-right: 2px;
+  /* Storage Percentage */
+  width: 81.5%;
+}
+
+.progress .field .bar .bullet{
+  display: block;
+  border-radius: 50%;
+  background-color: hsl(243, 100%, 93%);
+  height: 12px;
+  width: 12px;
 }
 
 .progress .count {
@@ -89,13 +151,6 @@ body {
   justify-content: space-between;
   padding-top: 8px;
   width: 100%;
-}
-
-.container .balloom {
-  display: none;
-  position: absolute;
-  height: 50px;
-  border: 1px solid red;
 }
 
 .attribution {
