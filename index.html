@@ -9,14 +9,8 @@
   
   <title>Frontend Mentor | Fylo data storage component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
   <div class="container">
     <section class="menu">
       <div class="brand">
@@ -34,18 +28,23 @@
         </a>
       </div>
     </section>
+
+    <div class="balloom">
+      185 GB Left
+    </div>
+
     <section class="progress">
       <div>
         You’ve used <strong>815 GB</strong> of your storage
-      </div>
-    
-      <div class="ballom">
-        185 GB Left
-      </div>
-      
-      <div class="progress-bar">
-        0 GB
-        1000 GB
+      </div>      
+      <div class="progress">
+        <div class="field">
+          <div class="bar"></div>
+        </div>
+        <div class="count">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
       </div>
     </section>
   </div>

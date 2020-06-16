@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: hsl(229, 57%, 11%);
   background-image: url('../images/bg-desktop.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 50%;
   background-position: bottom;
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  min-height: 100vh;
   padding: 0;
 }
 
 .container {
-  align-items: center;
-  justify-content: center;
   display: flex;
-  min-height: 100vh;
+  align-items: flex-end;
+  justify-content: center;
   width: 100%;
+  min-height: 60vh;
 }
 
 .container section {
@@ -54,6 +59,54 @@ body {
   height: 36px;
   padding: 4px;
   margin: 32px 16px 0 0;
+}
+
+.container .progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress .field {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  background-color: #151E49;
+  border-radius: 8px;
+  width: 500px;
+  height: 16px;
+}
+
+.progress .field .bar {
+  display: block;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 8px;
+  height: 16px;
+  width: 300px;
+}
+
+.progress .count {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  width: 100%;
+}
+
+.container .balloom {
+  display: none;
+  position: absolute;
+  height: 50px;
+  border: 1px solid red;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center; 
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 375px) {
